@@ -12,7 +12,6 @@ ENGINE.Bullet = function(args) {
   this.width = this.sprite[2];
   this.height = this.sprite[3];
   this.radius = Math.min(this.width, this.height) / 2 | 0;
-
 };
 
 ENGINE.Bullet.prototype = {

@@ -31,9 +31,13 @@ ENGINE.Asteroid.prototype = {
 
     this.hp -= data.damage;
 
+    var player = app.game.players[data.team];
+
     if (this.hp <= 0) {
 
       if (this.splits) this.split();
+
+      player.score = player.score + 1;
 
       this.collection.remove(this);
     }
