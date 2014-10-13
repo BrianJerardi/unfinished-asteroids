@@ -39,6 +39,11 @@ ENGINE.Asteroid.prototype = {
 
       player.score = player.score + 1;
 
+      this.collection.add(ENGINE.Coin, {
+        x: this.x,
+        y: this.y
+      });
+
       this.collection.remove(this);
     }
 
