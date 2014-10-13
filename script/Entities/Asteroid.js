@@ -22,7 +22,7 @@ ENGINE.Asteroid = function(args) {
 ENGINE.Asteroid.prototype = {
 
   constructor: ENGINE.Asteroid,
-  
+
   zIndex: 3,
 
   collidable: true,
@@ -38,6 +38,8 @@ ENGINE.Asteroid.prototype = {
       this.collection.remove(this);
     }
 
+    app.playSound("asteroid-hit");
+
   },
 
   split: function() {
@@ -50,6 +52,8 @@ ENGINE.Asteroid.prototype = {
         direction: Math.random() * 6
       });
     }
+
+    app.playSound("asteroid-crush");
 
   },
 
